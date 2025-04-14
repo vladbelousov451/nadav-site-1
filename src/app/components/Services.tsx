@@ -4,18 +4,18 @@ import { ChartBarIcon, WrenchScrewdriverIcon, BuildingOfficeIcon } from "@heroic
 export default function Services() {
   const items = [
     {
-      title: <><span className="text-4xl font-bold">ה</span>שקעות</>,
-      desc: "אנו מזהים הזדמנויות נדלן עם פוטנציאל גבוה.",
+      title: <><span className="text-4xl text-teal-600 font-bold">I</span>nvestment</>,
+      desc: "We identify high-potential real estate opportunities for our clients.",
       icon: <ChartBarIcon className="w-10 h-10 text-teal-600 mx-auto mb-4" />
     },
     {
-      title: <><span className="text-4xl font-bold">ש</span>יפוץ</>,
-      desc: "משדרגים נכסים כדי למקסם את ערכם בשוק.",
+      title: <><span className="text-4xl text-teal-600 font-bold">R</span>enovation</>,
+      desc: "Transforming properties to maximize their market value and appeal.",
       icon: <WrenchScrewdriverIcon className="w-10 h-10 text-teal-600 mx-auto mb-4" />
     },
     {
-      title: <><span className="text-4xl font-bold">נ</span>יהול</>,
-      desc: "שירותי ניהול כוללים לחוויית בעלות חלקה.",
+      title: <><span className="text-4xl text-teal-600 font-bold">M</span>anagement</>,
+      desc: "Comprehensive management services for hassle-free property ownership.",
       icon: <BuildingOfficeIcon className="w-10 h-10 text-teal-600 mx-auto mb-4" />
     }
   ];
@@ -31,7 +31,7 @@ export default function Services() {
         ))}
       </div>
       <div className="mt-10">
-        <Link href="/about" className="inline-block bg-teal-600 text-white py-3 px-6 rounded shadow hover:bg-teal-700 transition">קראו עוד עלינו</Link>
+        <Link href="/about" className="inline-block bg-teal-600 text-white py-3 px-6 rounded shadow hover:bg-teal-700 transition">See More About Us</Link>
       </div>
     </section>
   );
