@@ -1,4 +1,7 @@
-// app/about/page.tsx
+import AboutIntro from "../components/about/AboutIntro";
+import PartnerCards from "../components/about/Partner-Cards";
+import Hero from "../components/Hero";
+import Contact from "../components/Contact";
 import { ChartBarIcon, WrenchScrewdriverIcon, BuildingOfficeIcon } from "@heroicons/react/24/outline";
 
 const services = [
@@ -33,26 +36,11 @@ const services = [
 
 export default function AboutPage() {
   return (
-    <main className="bg-white text-gray-900 py-20 px-4 max-w-5xl mx-auto">
-      <h1 className="text-4xl font-bold text-center mb-12">About Our Services</h1>
-      <div className="space-y-16">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row ${index % 2 !== 0 ? "md:flex-row-reverse" : ""} items-center gap-8`}
-          >
-            <div className="md:w-1/2 flex justify-center">{service.icon}</div>
-            <div className="md:w-1/2">
-              <h2 className="text-2xl font-semibold mb-4">{service.title}</h2>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                {service.content.map((line, i) => (
-                  <li key={i}>{line}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </div>
+    <main>
+        <Hero></Hero>
+        <PartnerCards/>
+         <AboutIntro></AboutIntro>
+         <Contact></Contact>
     </main>
   );
 }

@@ -5,17 +5,17 @@ export default function Services() {
   const items = [
     {
       title: <><span className="text-4xl text-teal-600 font-bold">I</span>nvestment</>,
-      desc: "We identify high-potential real estate opportunities for our clients.",
+      desc: "השקעות נדל בהתאמה אישיתאנו מתמחים באיתור וביצוע עסקאות נדלן במגוון אסטרטגיות, ביניהן:",
       icon: <ChartBarIcon className="w-10 h-10 text-teal-600 mx-auto mb-4" />
     },
     {
       title: <><span className="text-4xl text-teal-600 font-bold">R</span>enovation</>,
-      desc: "Transforming properties to maximize their market value and appeal.",
+      desc: "שיפוץ והשבחת נכסיםלאחר איתור הנכס, אנו מבצעים תהליך השבחה מקיף בהתאם לייעוד הנכס ולדרישות המשקיע.",
       icon: <WrenchScrewdriverIcon className="w-10 h-10 text-teal-600 mx-auto mb-4" />
     },
     {
       title: <><span className="text-4xl text-teal-600 font-bold">M</span>anagement</>,
-      desc: "Comprehensive management services for hassle-free property ownership.",
+      desc: "השקעה בראש שקט – אנחנו דואגים להכול, אתם נהנים מהתשואה.",
       icon: <BuildingOfficeIcon className="w-10 h-10 text-teal-600 mx-auto mb-4" />
     }
   ];

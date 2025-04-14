@@ -2,8 +2,8 @@ export default function Properties() {
     const properties = [
       { title: "Old Town, Budapest", image: "/images/appartament-1.jpg" },
       { title: "Palace District, Budapest", image: "/images/appartament-3.jpg" },
-      { title: "Palace District, Budapest", image: "/images/appartament-3.jpg" },
-      { title: "Palace District, Budapest", image: "/images/appartament-3.jpg" },
+      { title: "Palace District, Budapest", image: "/images/apartament-5.png" },
+      { title: "Palace District, Budapest", image: "/images/apartament-4.png" },
     ];
     return (
       <section className="py-16 px-4 max-w-6xl mx-auto">
