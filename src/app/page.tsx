@@ -2,10 +2,8 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Properties from "./components/Properties";
 import Partners from "./components/Partners";
-import Contact from "./components/Contact";
 import WhyBudapest from "./components/WhyBudapest";
 import Stats from "./components/Stats";
-
 
 
 export default function Home() {
@@ -17,7 +15,7 @@ export default function Home() {
       <WhyBudapest/>
       <Properties />
       <Partners />
-      <Contact/>
     </main>
   );
 }
+

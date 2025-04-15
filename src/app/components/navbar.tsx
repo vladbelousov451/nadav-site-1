@@ -17,9 +17,10 @@ export default function Navbar() {
         <nav className="col-span-10 flex justify-end gap-8 font-bold text-lg">
           
           <Link href="/about" className="hover:underline">אודות</Link>
-          <Link href="#services" className="hover:underline">שירותים</Link>
-          <Link href="#properties" className="hover:underline">נכסים</Link>
+          <Link href="/services" className="hover:underline">שירותים</Link>
+          <Link href="/Properties" className="hover:underline">נכסים</Link>
           <Link href="#contact" className="hover:underline">צור קשר</Link>
+          <Link href="/blog" className="hover:underline">בלוג</Link>
           <Link href="/" className="hover:underline">דף הבית</Link>
         </nav>
       </div>

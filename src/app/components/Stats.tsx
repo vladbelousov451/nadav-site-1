@@ -29,7 +29,7 @@ function AnimatedNumber({ target, prefix = "", suffix = "" }: { target: number; 
   }, [target]);
 
   return (
-    <span className="text-2xl md:text-3xl font-bold text-teal-600">
+    <span className="text-2xl md:text-3xl font-bold text-emerald-600">
       {prefix}{count.toLocaleString()}{suffix}
     </span>
   );

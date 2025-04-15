@@ -1,9 +1,7 @@
 // app/blog/page.tsx
 import Link from "next/link";
-import Image from "next/image";
-import Contact from "../components/Contact";
 import Hero from "../components/Hero";
-import Footer from "../components/Footer";
+
 
 
 const posts = [
@@ -49,7 +47,7 @@ export default function BlogPage() {
                 <h2 className="text-3xl text-black font-semibold mb-3">{post.title}</h2>
                 <p className="text-gray-600 mb-3 text-lg">{post.excerpt}</p>
                 <p className="text-sm text-gray-400 mb-4">{post.date}</p>
-                <Link href={`/blog/${post.slug}`} className="text-teal-600 hover:underline text-base font-medium">
+                <Link href={`/blog/${post.slug}`} className="text-emerald-800 hover:underline text-base font-medium">
                   Read more →
                 </Link>
               </div>
@@ -58,8 +56,6 @@ export default function BlogPage() {
         </div>
       </div>
     </section>
-    <Contact/>
-    <Footer/>
     </div>
   );
 }

@@ -3,17 +3,17 @@ const steps = [
     {
       title: "Strategic Location",
       text: "Budapest is at the heart of Europe, offering strong connectivity and accessibility for international investors.",
-      icon: <GlobeEuropeAfricaIcon className="w-20 h-20 text-teal-600" />
+      icon: <GlobeEuropeAfricaIcon className="w-20 h-20 text-emerald-800" />
     },
     {
       title: "Growing Real Estate Market",
       text: "Property values in Budapest continue to rise with high rental yields and increasing demand.",
-      icon: <BuildingOffice2Icon className="w-20 h-20 text-teal-600" />
+      icon: <BuildingOffice2Icon className="w-20 h-20 text-emerald-800" />
     },
     {
       title: "Tourism & Lifestyle",
       text: "A vibrant cultural scene and affordable living make Budapest attractive for both residents and visitors.",
-      icon: <SparklesIcon className="w-20 h-20 text-teal-600" />
+      icon: <SparklesIcon className="w-20 h-20 text-emerald-800" />
     }
   ];
   

@@ -44,14 +44,14 @@ const partners = [
           <h2 className="text-3xl font-bold text-black text-center mb-12">הכירו את הצוות</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {partners.map((partner, index) => (
-              <div key={index} className="bg-zinc-50 rounded-lg shadow-md overflow-hidden text-center p-6">
+              <div key={index} className="bg-zinc-200 rounded-lg shadow-md overflow-hidden text-center p-6">
                 <img
                   src={partner.image}
                   alt={partner.name}
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-xl text-black font-semibold mb-1">{partner.name}</h3>
-                <p className="text-sm text-black">{partner.role}</p>
+                <p className="text-xl font-bold text-black">{partner.role}</p>
                 <p className="text-black font-bold text-sm">{partner.description} </p>
               </div>
             ))}

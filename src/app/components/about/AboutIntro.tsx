@@ -1,3 +1,5 @@
+import Footer from "../Footer";
+
 export default function AboutIntro() {
     return (
       <section className="relative bg-zinc-100 text-gray-900 py-24 px-4 overflow-hidden">
@@ -8,7 +10,7 @@ export default function AboutIntro() {
             <p className="leading-relaxed text-lg text-gray-700">
               לורם איפסום דולור סיט אמט, קונסקטetur אדיפיסינג אלית קו.<br />מספרי לוגם, השפעתו עלינו כגוף השקעות – פשוט. צומחים יחד, מזמינים אתכם להצטרף למסע, ולהיות חלק ממשהו גדול ורווחי.<br />אנחנו מאמינים בשקיפות, במקצועיות, ובחוויית לקוח שעושה את ההבדל. הצוות שלנו כאן ללוות אתכם לאורך כל הדרך.
             </p>
-            <button className="mt-6 bg-teal-600 text-white px-6 py-3 rounded hover:bg-teal-700 transition">עוד עלינו</button>
+            <button className="mt-6 bg-zinc-800 text-white px-6 py-3 rounded hover:bg-zinc-700 transition">עוד עלינו</button>
           </div>
           <div className="relative">
             <img
