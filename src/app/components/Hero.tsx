@@ -1,7 +1,7 @@
 import Navbar from "./navbar";
 export default function Hero() {
     return (
-      <section className="relative h-[60vh] bg-cover  bg-center text-white" style={{ backgroundImage: 'url("/images/hero-bg.jpg")' }}>
+      <section className="relative h-[60vh] bg-cover    bg-center text-white" style={{ backgroundImage: 'url("/images/hero-bg.jpg")' }}>
          <Navbar />
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">

@@ -31,7 +31,7 @@ export default function Services() {
         ))}
       </div>
       <div className="mt-10">
-        <Link href="/about" className="inline-block bg-teal-600 text-white py-3 px-6 rounded shadow hover:bg-teal-700 transition">See More About Us</Link>
+        <Link href="/services" className="inline-block bg-teal-600 text-white py-3 px-6 rounded shadow hover:bg-teal-700 transition">See More</Link>
       </div>
     </section>
   );
