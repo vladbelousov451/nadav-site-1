@@ -1,40 +1,45 @@
 // components/Navbar.tsx
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+import { Bars2Icon, XCircleIcon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="absolute top-0 left-0 w-full z-50 bg-transparent text-white">
-      <div className="hidden md:grid grid-cols-12 items-center px-8 py-4">
-        <div className="col-span-2">
-          <Link href="/" className="block">
-            <img
-              src="/images/logo-no-background.svg"
-              alt="IRM Logo"
-              className="w-24 h-24 object-contain"
-            />
-          </Link>
-        </div>
-        <nav className="col-span-10 flex justify-end gap-8 font-bold text-lg">
-          
-          <Link href="/about" className="hover:underline">אודות</Link>
-          <Link href="/services" className="hover:underline">שירותים</Link>
-          <Link href="/Properties" className="hover:underline">נכסים</Link>
-          <Link href="#contact" className="hover:underline">צור קשר</Link>
-          <Link href="/blog" className="hover:underline">בלוג</Link>
-          <Link href="/" className="hover:underline">דף הבית</Link>
-        </nav>
+    <header className="absolute top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-transparent text-white">
+      <Link href="/" className="block">
+        <img
+          src="/images/logo-no-background.svg"
+          alt="IRM Logo"
+          className="w-24 h-24 object-contain"
+        />
+      </Link>
+
+      <div className="md:hidden">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-white focus:outline-none"
+        >
+          {isOpen ? <XCircleIcon className="w-6 h-6" /> : <Bars2Icon className="w-6 h-6" />}
+        </button>
       </div>
 
-      {/* Mobile version */}
-      <div className="md:hidden flex justify-between items-center px-6 py-4">
-        <Link href="/">
-          <img
-            src="/images/logo-no-background.svg"
-            alt="IRM Logo"
-            className="w-16 h-16 object-contain"
-          />
-        </Link>
-      </div>
+      <nav
+        className={`${
+          isOpen ? "block" : "hidden"
+        } md:flex absolute md:relative top-20 md:top-0 left-0 w-full md:w-auto bg-black/80 md:bg-transparent px-6 md:px-0 text-right md:text-left transition-all duration-300 ease-in-out`}
+      >
+        <div className="flex flex-col md:flex-row items-end md:items-center space-y-4 md:space-y-0 md:space-x-6">
+          <Link href="/" className="hover:underline">דף הבית</Link>
+          <Link href="/about" className="hover:underline">אודות</Link>
+          <Link href="/#services" className="hover:underline">שירותים</Link>
+          <Link href="/properties" className="hover:underline">דירות</Link>
+          <Link href="/#contact" className="hover:underline">צור קשר</Link>
+        </div>
+      </nav>
     </header>
   );
 }
