@@ -33,11 +33,13 @@ export default function Navbar() {
         } md:flex absolute md:relative top-20 md:top-0 left-0 w-full md:w-auto bg-black/80 md:bg-transparent px-6 md:px-0 text-right md:text-left transition-all duration-300 ease-in-out`}
       >
         <div className="flex flex-col md:flex-row items-end md:items-center space-y-4 md:space-y-0 md:space-x-6">
-          <Link href="/" className="hover:underline">דף הבית</Link>
+          
           <Link href="/about" className="hover:underline">אודות</Link>
-          <Link href="/#services" className="hover:underline">שירותים</Link>
-          <Link href="/properties" className="hover:underline">דירות</Link>
+          <Link href="/services" className="hover:underline">שירותים</Link>
+          <Link href="/Properties" className="hover:underline">דירות</Link>
           <Link href="/#contact" className="hover:underline">צור קשר</Link>
+          <Link href="/" className="hover:underline">ליווי משקיעים </Link>
+          <Link href="/" className="hover:underline">דף הבית</Link>
         </div>
       </nav>
     </header>
