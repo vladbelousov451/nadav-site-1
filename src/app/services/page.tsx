@@ -6,19 +6,19 @@ import Image from "next/image";
 const services = [
   {
     title: "השקעות בפרויקטים חדשים",
-    icon: <BuildingOffice2Icon className="w-14 h-14 text-emerald-800 mb-2" />, 
+    icon: <BuildingOffice2Icon className="w-14 h-14 text-sky-900 mb-2" />, 
     image: "/images/invest-1.jpeg",
     subtitle: "השקעות Presale בפרויקטים חדשים",
   },
   {
     title: "עסקאות Flip להגדלת ההון",
-    icon: <ArrowTrendingUpIcon className="w-14 h-14 text-emerald-800 mb-2" />, 
+    icon: <ArrowTrendingUpIcon className="w-14 h-14 text-sky-900 mb-2" />, 
     image: "/images/invest-2.jpeg",
     subtitle: "עסקאות Flip להגדלת ההון",
   },
   {
     title: "דירות לפיצול והשבחה",
-    icon: <HomeModernIcon className="w-14 h-14 text-emerald-800 mb-2" />, 
+    icon: <HomeModernIcon className="w-14 h-14 text-sky-900 mb-2" />, 
     image: "/images/invest-3.jpeg",
     subtitle: "דירות לפיצול והשבחה",
   }
@@ -27,22 +27,22 @@ const services = [
 const renovations = [
   {
     image: "/images/renovation-2.jpeg",
-    icon: <WrenchScrewdriverIcon className="w-14 h-14 text-emerald-800 mb-2" />,
+    icon: <WrenchScrewdriverIcon className="w-14 h-14 text-sky-900 mb-2" />,
     subtitle: "יצירת בידול ויתרון בשוק באמצעות עיצובים בחומרים איכותיים",
   },
   {
     image: "/images/renovation-2.jpeg",
-    icon: <BuildingStorefrontIcon className="w-14 h-14 text-emerald-800 mb-2" />,
+    icon: <BuildingStorefrontIcon className="w-14 h-14 text-sky-900 mb-2" />,
     subtitle: "התמחות בנכסים יוקרתיים, דירות לחיילים ודירות לפיצול",
   },
   {
     image: "/images/renovation-3.jpeg",
-    icon: <CurrencyDollarIcon className="w-14 h-14 text-emerald-800 mb-2" />,
+    icon: <CurrencyDollarIcon className="w-14 h-14 text-sky-900 mb-2" />,
     subtitle: "תכנון ממוקד להשבחת ערך הנכס ומיצוי הפוטנציאל שבו",
   },
   {
     image: "/images/renovation-4.jpeg",
-    icon: <UsersIcon className="w-14 h-14 text-emerald-800 mb-2" />,
+    icon: <UsersIcon className="w-14 h-14 text-sky-900 mb-2" />,
     subtitle: "צוות מומחים הכולל אדריכלים, מעצבי פנים, חשמלאים ואנשי מקצוע",
   }
 ];
@@ -50,27 +50,27 @@ const renovations = [
 const management = [
   {
     image: "/images/managment-3.jpeg",
-    icon: <DocumentTextIcon className="w-14 h-14 text-emerald-800 mb-2" />,
+    icon: <DocumentTextIcon className="w-14 h-14 text-sky-900 mb-2" />,
     subtitle: "טיפול מלא בבירוקרטיה – הופכת רישויות, תשלומי חשבונות ודיווחים לשירותים",
   },
   {
     image: "/images/managment-2.jpeg",
-    icon: <ArrowsRightLeftIcon className="w-14 h-14 text-emerald-800 mb-2" />,
+    icon: <ArrowsRightLeftIcon className="w-14 h-14 text-sky-900 mb-2" />,
     subtitle: "ניהול תמחור דינמי לפי ביקוש, אירועים וחיוניות עונתית",
   },
   {
     image: "/images/managment-3.jpeg",
-    icon: <WrenchIcon className="w-14 h-14 text-emerald-800 mb-2" />,
+    icon: <WrenchIcon className="w-14 h-14 text-sky-900 mb-2" />,
     subtitle: "שירותי ניקיון, כניסה, אחזקה שוטפת ותחזוקה טכנית",
   },
   {
     image: "/images/managment-2.jpeg",
-    icon: <UserGroupIcon className="w-14 h-14 text-emerald-800 mb-2" />,
+    icon: <UserGroupIcon className="w-14 h-14 text-sky-900 mb-2" />,
     subtitle: "שירות לקוחות 24/7 וטיפול בדיירים",
   },
   {
     image: "/images/managment-5.jpeg",
-    icon: <BuildingLibraryIcon className="w-14 h-14 text-emerald-800 mb-2" />,
+    icon: <BuildingLibraryIcon className="w-14 h-14 text-sky-900 mb-2" />,
     subtitle: "השקעות Presale בפרויקטים חדשים",
   }
 ];

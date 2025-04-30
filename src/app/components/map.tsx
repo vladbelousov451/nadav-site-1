@@ -4,7 +4,7 @@ export default function MapOfBudapest() {
     return (
       <section className="bg-gray-100 py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-extrabold text-emerald-800 mb-8 drop-shadow-[2px_2px_0_rgba(0,0,0,0.1)]">
+          <h2 className="text-4xl font-extrabold text-sky-900 mb-8 drop-shadow-[2px_2px_0_rgba(0,0,0,0.1)]">
             Map of Budapest
           </h2>
           <div className="w-full h-[500px] rounded-lg overflow-hidden shadow-md">

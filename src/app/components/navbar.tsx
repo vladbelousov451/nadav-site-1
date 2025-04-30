@@ -38,7 +38,7 @@ export default function Navbar() {
           <Link href="/services" className="hover:underline">שירותים</Link>
           <Link href="/Properties" className="hover:underline">דירות</Link>
           <Link href="/#contact" className="hover:underline">צור קשר</Link>
-          <Link href="/" className="hover:underline">ליווי משקיעים </Link>
+          <Link href="/BuyingSteps" className="hover:underline">ליווי משקיעים </Link>
           <Link href="/" className="hover:underline">דף הבית</Link>
         </div>
       </nav>

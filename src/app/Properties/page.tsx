@@ -1,7 +1,7 @@
 // app/properties/page.tsx
 import Image from "next/image";
 import Hero from "../components/Hero";
-
+import BudapestMapSection from "../components/BudapestMapSection";
 const apartments = [
   {
     title: "דירה ליד הפרלמנט",
@@ -77,13 +77,14 @@ export default function ApartmentsPage() {
                 <h3 className="text-xl font-semibold text-gray-800 mb-1">{apartment.title}</h3>
                 <p className="text-sm text-gray-600">גודל הדירה: {apartment.size}</p>
                 <p className="text-sm text-gray-600">{apartment.units}</p>
-                <p className="text-sm text-emerald-700 font-bold mt-2">{apartment.price}</p>
+                <p className="text-sm text-sky-700 font-bold mt-2">{apartment.price}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
     </section>
+    <BudapestMapSection/>
     </div>
   );
 }

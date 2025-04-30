@@ -11,22 +11,22 @@ export default function Contact() {
             <input
               type="text"
               placeholder="Full Name"
-              className="col-span-1 text-black md:col-span-2 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="col-span-1 text-black md:col-span-2 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
             />
             <input
               type="email"
               placeholder="Email Address"
-              className="col-span-1 text-black p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="col-span-1 text-black p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
             />
             <input
               type="tel"
               placeholder="Phone Number (optional)"
-              className="col-span-1 p-4 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="col-span-1 p-4 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
             />
             <textarea
               placeholder="Your Message"
               rows={5}
-              className="col-span-1 md:col-span-2 text-black p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="col-span-1 md:col-span-2 text-black p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
             ></textarea>
             <div className="col-span-1 md:col-span-2 text-center">
               <button

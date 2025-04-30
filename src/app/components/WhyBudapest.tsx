@@ -11,24 +11,24 @@ const steps = [
   {
     title: "מיקום אסטרטגי",
     text: "בודפשט ממוקמת בלב אירופה ומציעה נגישות מעולה למשקיעים בינלאומיים.",
-    icon: <GlobeEuropeAfricaIcon className="w-24 h-24 text-emerald-800" />,
+    icon: <GlobeEuropeAfricaIcon className="w-24 h-24 text-sky-900" />,
   },
   {
     title: "שוק נדל\"ן בצמיחה",
     text: "ערך הנכסים בבודפשט עולה בהתמדה עם ביקוש גובר ותשואות גבוהות להשכרה.",
-    icon: <BuildingOffice2Icon className="w-24 h-24 text-emerald-800" />,
+    icon: <BuildingOffice2Icon className="w-24 h-24 text-sky-900" />,
   },
   {
     title: "תיירות ואיכות חיים",
     text: "עיר עם תרבות עשירה, חיי לילה ומחייה נוחה הופכת את בודפשט למוקד משיכה.",
-    icon: <SparklesIcon className="w-24 h-24 text-emerald-800" />,
+    icon: <SparklesIcon className="w-24 h-24 text-sky-900" />,
   },
 ];
 
 export default function WhyBudapest() {
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto">
-      <h2 className="text-4xl font-bold text-center text-emerald-800 mb-16 drop-shadow">
+      <h2 className="text-4xl font-bold text-center text-sky-900 mb-16 drop-shadow">
         ? למה בודפשט 
       </h2>
 
