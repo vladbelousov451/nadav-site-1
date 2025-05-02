@@ -24,11 +24,17 @@ export default function Hero() {
       <Navbar />
 
       {/* 📋 Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg">
+      <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 max-w-4xl mx-auto pt-20">
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg"
+          dir="rtl"
+        >
           חולמים על נכס מניב בלב אירופה?
         </h1>
-        <p className="text-lg sm:text-2xl md:text-xl font-medium mb-6 leading-relaxed drop-shadow-md">
+        <p
+          className="text-lg sm:text-2xl md:text-xl font-medium mb-6 leading-relaxed drop-shadow-md"
+          dir="rtl"
+        >
           אנחנו ב־IRM מתמחים בליווי משקיעים ישראלים לרכישת דירות להשקעה בבודפשט – משלב התיווך,
           דרך ניהול נכסים, ועד השבחה וניהול שוטף. <br />
           השקעה בנדל"ן בהונגריה מעולם לא הייתה פשוטה יותר – עם ליווי אישי, שקיפות מלאה ותשואה גבוהה.
