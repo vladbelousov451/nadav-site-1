@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/react"
 import Hero from "./components/Hero";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -31,7 +31,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="bg-white text-gray-900 font-sans">
-        <main>{children}</main>
+        <main>{children}</main> 
+        <Analytics/>
 
       </body>
       <Contact/>
