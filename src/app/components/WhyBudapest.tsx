@@ -9,32 +9,32 @@ import {
 
 const steps = [
   {
-    title: "מיקום אסטרטגי",
-    text: "בודפשט ממוקמת בלב אירופה ומציעה נגישות מעולה למשקיעים בינלאומיים.",
+    title: "מיקום אסטרטגי באירופה",
+    text: "בודפשט שוכנת בלב אירופה ומציעה גישה נוחה למשקיעים מכל העולם. הקרבה למדינות האיחוד האירופי תורמת ליציבות הכלכלית ולהזדמנויות מגוונות.",
     icon: <GlobeEuropeAfricaIcon className="w-24 h-24 text-sky-900" />,
   },
   {
-    title: "שוק נדל\"ן בצמיחה",
-    text: "ערך הנכסים בבודפשט עולה בהתמדה עם ביקוש גובר ותשואות גבוהות להשכרה.",
+    title: "שוק נדל\"ן בצמיחה מתמדת",
+    text: "שוק הנדל\"ן של בודפשט נמצא בעלייה מתמשכת עם ביקוש גובר להשכרה ודירות להשקעה. מחירי הנכסים עולים, ויחס התשואה נחשב לאחד הגבוהים באירופה.",
     icon: <BuildingOffice2Icon className="w-24 h-24 text-sky-900" />,
   },
   {
-    title: "תיירות ואיכות חיים",
-    text: "עיר עם תרבות עשירה, חיי לילה ומחייה נוחה הופכת את בודפשט למוקד משיכה.",
+    title: "איכות חיים גבוהה ותיירות משגשגת",
+    text: "בודפשט מציעה חיי תרבות עשירים, בילויים, עלויות מחייה נוחות ותשתיות מתקדמות – מה שהופך אותה ליעד אידיאלי להשקעה, מגורים והשכרה לטווח קצר או ארוך.",
     icon: <SparklesIcon className="w-24 h-24 text-sky-900" />,
   },
 ];
 
 export default function WhyBudapest() {
   return (
-    <section className="py-20 px-4 max-w-6xl mx-auto">
-      <h2 className="text-4xl font-bold text-center text-sky-900 mb-16 drop-shadow">
-        ? למה בודפשט 
+    <section className="py-20 px-4 max-w-6xl mx-auto" id="why-budapest">
+      <h2 className="text-4xl font-extrabold text-center text-sky-900 mb-16 drop-shadow">
+        למה להשקיע בנדל״ן בבודפשט?
       </h2>
 
       <div className="space-y-24">
         {steps.map((step, i) => (
-          <motion.div
+          <motion.article
             key={i}
             initial={{ opacity: 0, x: i % 2 === 0 ? -80 : 80 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -44,16 +44,12 @@ export default function WhyBudapest() {
               i % 2 !== 0 ? "md:flex-row-reverse" : ""
             }`}
           >
-            <div className="w-full md:w-1/3 flex justify-center">
-              {step.icon}
-            </div>
+            <div className="w-full md:w-1/3 flex justify-center">{step.icon}</div>
             <div className="md:w-2/3 text-right">
-              <h3 className="text-2xl font-extrabold text-gray-800 mb-4">
-                {step.title}
-              </h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">{step.title}</h3>
               <p className="text-gray-600 text-lg leading-relaxed">{step.text}</p>
             </div>
-          </motion.div>
+          </motion.article>
         ))}
       </div>
     </section>
