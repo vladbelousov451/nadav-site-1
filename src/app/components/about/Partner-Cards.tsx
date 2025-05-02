@@ -2,7 +2,7 @@ const partners = [
   {
     name: "Nadav Laluz",
     role: "Co-Founder & Investment Director",
-    image: "/images/nadav.png",
+    image: "/images/nadav-1.png",
     description: `בעלים של חברה לליווי משקיעים בבודפשט
       שמנהלת מעל ל 250 נכסים,
       יהונתן מביא ניסיון ארוך שנים בעסקאות
@@ -23,7 +23,7 @@ const partners = [
   {
     name: "Yehonatan Wolshteiin",
     role: "Co-Founder & Client Success Lead",
-    image: "/images/yehonatan.png",
+    image: "/images/yehonatan-1.png",
     description: `בעלים של חברה לליווי משקיעים בבודפשט
       שמנהלת מעל ל 250 נכסים,
       יהונתן מביא ניסיון ארוך שנים בעסקאות

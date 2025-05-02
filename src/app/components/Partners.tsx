@@ -1,8 +1,8 @@
 export default function Partners() {
   const partners = [
-    { name: "Nadav Laluz", image: "/images/nadav.png" },
+    { name: "Nadav Laluz", image: "/images/nadav-1.png" },
     { name: "Ido Hatuka", image: "/images/ido.png" },
-    { name: "Yehonatan Wolshtein", image: "/images/yehonatan.png" }
+    { name: "Yehonatan Wolshtein", image: "/images/yehonatan-1.png" }
   ];
 
   return (
