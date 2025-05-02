@@ -52,11 +52,11 @@ export default function BudapestMapSection() {
         </div>
         <div className="max-w-xl text-right lg:text-right" dir="rtl">
           <h2 className="text-4xl text-sky-700  mb-6">אנחנו על המפה,<span className="text-sky-900 font-bold"> ונשאר על המפה!</span></h2>
-          <p className="mb-6 font-bold text-2xl text-black leading-relaxed">
+          <p className="mb-6 font-bold text-lg text-black leading-relaxed">
             קבוצת IRM כוללת צוות בעל ניסיון עצום עם תוצאות מוכחות בתחום הנדל"ן בבודפשט.
             פועלים בשכונות המובילות בעיר עם נוכחות חזקה בשוק ההשקעות.
           </p>
-          <p className="mb-4 text-2xl text-black font-bold leading-relaxed">
+          <p className="mb-4 text-lg text-black font-bold leading-relaxed">
             מצפון לדרום, ממזרח למערב — יש לנו את ההבנה, הניסיון, והנכסים הנכונים כדי לייצג אתכם בצורה מושלמת.
           </p>
           <button className="bg-sky-900 text-white px-6 py-3 rounded-full text-lg font-bold hover:bg-sky-700 transition">
