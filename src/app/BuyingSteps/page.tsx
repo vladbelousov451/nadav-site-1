@@ -1,4 +1,3 @@
-// components/StepImage.tsx
 "use client";
 
 import Image from "next/image";
@@ -8,50 +7,43 @@ import Hero from "../components/Hero";
 
 const layers = [
   "/images/appartament-3.jpg",
-  "/images/appartament-1.jpg",
-  "/images/appartament-2.jpg",
-  "/images/appartament-3.jpg",
   "/images/appartament-4.jpg",
-  "/images/appartament-5.jpg",
-  "/images/appartament-6.jpg",
-  "/images/appartament-7.jpg",
+  "/images/appartament5.jpg",
+  "/images/appartament-3.jpg",
+  "/images/appartament-3.jpg",
+  "/images/appartament-3.jpg",
 ];
 
 const stepTexts = [
   {
-    title: "ניתוח מעמיק: הבנת צרכים ומטרות",
+    title: "🧠 ניתוח מעמיק – כי הכול מתחיל בהבנה אמיתית",
     description:
-      "אנחנו ביחד מההתחלה ועד הסוף – נבין את הצרכים והמטרות שלכם, נלמד את היכולות הכלכליות ונבנה תכנית מותאמת אישית.",
+      "לפני שמתחילים לדבר על דירות, השקעות ומספרים – אנחנו עוצרים. מקשיבים. מבינים מי אתם, מה חשוב לכם, איפה אתם רואים את עצמכם בעוד חמש שנים ומה הכי מפחיד אתכם בתהליך. זה לא רק נדל\"ן – זו החלטה שמשפיעה על החיים, ואנחנו כאן כדי לוודא שהיא מדויקת עבורכם. נבדוק את היכולות הכלכליות שלכם, נגדיר מטרות ברורות – ונתחיל לרקום את התמונה יחד.",
   },
   {
-    title: "בניית תכנית עסקית",
+    title: "📈 בונים תכנית עסקית שמבוססת על מספרים ולא על תחושות",
     description:
-      "ננתח את הכדאיות הכלכלית, נבנה תזרים, נחשב עלויות ותשואות, ונבין יחד את הפוטנציאל הכלכלי של העסקה.",
+      "אחרי שיש לנו את התמונה הכללית – זה הזמן לצלול לפרטים. אנחנו יושבים יחד ובונים תכנית עסקית מקיפה. מה זה כולל? ניתוח מעמיק של הכדאיות הכלכלית, תזרים מזומנים מדויק, חישובי עלויות מול תשואות, תרחישים שונים ותחזיות לעתיד. כל שורה בטבלה נבחנת, כל נתון מקבל מקום. אתם תצאו מהשלב הזה עם ודאות ועם ביטחון שאתם יודעים בדיוק למה אתם נכנסים.",
   },
   {
-    title: "בחירת השוק האידיאלי עבורכם",
+    title: "🌍 מחפשים – ומוצאים – את ההשקעה שתפורה בדיוק לכם",
     description:
-      "נאתר את הנכסים האידיאליים בהתאם לפרופיל שלכם, נבצע משא ומתן ונבחר את העסקה המנצחת.",
+      "כאן מתחיל החלק המרגש – איתור הנכס. לא נזרוק לכם לינקים ולא נשלח אתכם \"להסתכל באתר\". אנחנו נכנסים לעבודה אמיתית: מחפשים נכסים שמתאימים לפרופיל ההשקעה שבנינו יחד, בודקים כל פרט, מבצעים הערכות שוק, בוחנים סביבות מגורים, פוטנציאל השבחה והשכרה – וכל זה תוך כדי שיח פתוח איתכם. בסוף, ננהל גם את המו\"מ – ונדאג שתצאו עם עסקה חזקה ביד.",
   },
   {
-    title: "השגת המימון הנדרש",
+    title: "🏦 סוגרים את הפינה הכלכלית – מימון בתנאים שמתאימים לכם",
     description:
-      "נלווה אתכם בגיוס מימון בהתאם לתכנית – נוודא שהעסקה מתבצעת בביטחון מלא.",
+      "השגת מימון יכולה להיות כאב ראש – אבל לא איתנו. אנחנו נלווה אתכם יד ביד, נבחן את אפשרויות המימון, נמליץ על פתרונות שמתאימים לכם (ולא רק לבנק), ונוודא שאתם מקבלים את התנאים הכי טובים שאפשר. בשקט. בביטחון. בלי הפתעות.",
   },
   {
-    title: "גיבוי משפטי מלא",
+    title: "⚖️ ליווי משפטי בלי אותיות קטנות",
     description:
-      "עורך דין מומחה ילווה אתכם, יבצע את כל הבדיקות המשפטיות ויסגור את העסקה בראש שקט.",
+      "עסקה טובה היא עסקה שבנויה נכון גם משפטית. לכן עורך דין מומחה בתחום יבדוק כל מסמך, יבחן כל סעיף, יטפל בכל פרט משפטי – ואתם תדעו שיש מי ששומר עליכם. לא תצטרכו להתמודד לבד עם חוזים, תקנות או רגולציות זרות – אנחנו דואגים להכול.",
   },
   {
-    title: "השבחת הנכס והום סטיילינג",
+    title: "🏗️ משפצים, משדרגים, מעצבים – עד שהנכס נראה מיליון דולר",
     description:
-      "ננהל את שיפוץ הנכס כולו – כולל עיצוב חדש, מיתוג וניהול הקבלנים בשטח.",
-  },
-  {
-    title: "לקטוף את הפירות",
-    description:
-      "הנכס מוכן להשכרה – אנחנו מוצאים שוכר, מנהלים חוזים ואתם מקבלים תשואה."
+      "כאן מתחילה ההשבחה. אנחנו נכנסים לשטח, מביאים קבלנים, מעצבים, הום סטיילינג – הכול בתיאום מלא איתכם. בין אם מדובר בשיפוץ מלא ובין אם רק בליטוש קל – אנחנו נדאג שהנכס ייראה מדויק, מרשים ומוכן להזמנה של השוכר הראשון.",
   },
 ];
 
@@ -83,64 +75,69 @@ export default function StepImageScroll() {
 
   return (
     <div>
-      <Hero/>
-    <div className="relative bg-white">
-      <div className="sticky top-0 z-10 h-[70vh] flex items-center justify-center bg-white">
-        <div className="w-1/2 h-full flex items-center justify-center">
-          <div className="w-[80%] h-[80%] relative">
+      <Hero />
+
+      <div className="relative bg-white">
+        <div className="sticky top-0 z-10 h-[70vh] flex flex-col md:flex-row bg-white">
+          {/* Image */}
+          <div className="w-full md:w-1/2 h-[70vh] flex items-center justify-center">
+            <div className="w-[80%] h-[80%] relative">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={layers[visibleStep]}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={layers[visibleStep]}
+                    alt={`Step ${visibleStep}`}
+                    fill
+                    className="object-cover rounded shadow"
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* Text */}
+          <div className="w-full md:w-1/2 h-[70vh] flex items-center justify-center px-4 md:px-8 text-right">
             <AnimatePresence mode="wait">
               <motion.div
-                key={layers[visibleStep]}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.6 }}
-                className="absolute inset-0"
+                key={stepTexts[visibleStep].title}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.5 }}
+                className="bg-gray-100 rounded shadow p-6 md:p-8 max-w-xl w-full"
               >
-                <Image
-                  src={layers[visibleStep]}
-                  alt={`Step ${visibleStep}`}
-                  fill
-                  className="object-cover rounded shadow"
-                />
+                <h2 className="text-2xl font-bold text-sky-800 mb-4">
+                  {stepTexts[visibleStep].title}
+                </h2>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  {stepTexts[visibleStep].description}
+                </p>
               </motion.div>
             </AnimatePresence>
           </div>
         </div>
-        <div className="w-1/2 pr-8 text-right">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={stepTexts[visibleStep].title}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.5 }}
-              className="bg-gray-100 rounded shadow p-8 max-w-xl mx-auto"
-            >
-              <h2 className="text-2xl font-bold text-sky-800 mb-2">
-                {stepTexts[visibleStep].title}
-              </h2>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                {stepTexts[visibleStep].description}
-              </p>
-            </motion.div>
-          </AnimatePresence>
+
+        {/* Invisible scroll steps */}
+        <div className="pt-[70vh]">
+          {stepTexts.map((_, i) => (
+            <div
+              key={i}
+              data-step={i}
+              ref={(el) => {
+                stepRefs.current[i] = el;
+              }}
+              className="min-h-[100vh]"
+            />
+          ))}
         </div>
       </div>
-
-      <div className="pt-[70vh]">
-        {stepTexts.map((_, i) => (
-          <div
-            key={i}
-            data-step={i}
-            ref={(el) => {
-              stepRefs.current[i] = el;
-            }}
-            className="min-h-[100vh]"
-          />
-        ))}
-      </div>
-    </div>
     </div>
   );
 }
