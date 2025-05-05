@@ -8,9 +8,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
-      {/* Fixed Logo Layer */}
-      <div className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-transparent">
+    <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
+      {/* Top Bar (Logo + Toggle) */}
+      <div className="px-6 py-4 flex justify-between items-center">
         <Link href="/" className="block z-50">
           <img
             src="/images/822216_1013.svg"
@@ -19,7 +19,7 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Toggle */}
         <div className="md:hidden z-50">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -32,28 +32,32 @@ export default function Navbar() {
             )}
           </button>
         </div>
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex space-x-6 text-white text-xl font-bold" dir="rtl">
+          <Link href="/about" className="hover:underline">אודות</Link>
+          <Link href="/services" className="hover:underline">שירותים</Link>
+          <Link href="/Properties" className="hover:underline">דירות</Link>
+          <Link href="/#contact" className="hover:underline">צור קשר</Link>
+          <Link href="/BuyingSteps" className="hover:underline">ליווי משקיעים</Link>
+          <Link href="/" className="hover:underline">דף הבית</Link>
+        </nav>
       </div>
 
-      {/* Navigation Overlay (under logo) */}
-      <nav
-        className={`
-          ${isOpen ? "translate-y-0" : "-translate-y-full"}
-          md:translate-y-0
-          fixed md:relative top-24 md:top-0 right-0 w-full md:w-auto h-[calc(100vh-6rem)] md:h-auto
-          bg-black/90 md:bg-transparent text-white
-          flex flex-col md:flex-row items-center justify-center md:justify-end
-          space-y-6 md:space-y-0 md:space-x-8 text-xl font-bold
-          transition-transform duration-300 ease-in-out z-40
-        `}
+      {/* Mobile Slide-Out Menu */}
+      <div
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black/90 flex flex-col items-center justify-center space-y-6 text-white text-xl font-bold transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-y-0" : "-translate-y-full"
+        }`}
         dir="rtl"
       >
-        <Link href="/about" className="hover:underline" onClick={() => setIsOpen(false)}>אודות</Link>
-        <Link href="/services" className="hover:underline" onClick={() => setIsOpen(false)}>שירותים</Link>
-        <Link href="/Properties" className="hover:underline" onClick={() => setIsOpen(false)}>דירות</Link>
-        <Link href="/#contact" className="hover:underline" onClick={() => setIsOpen(false)}>צור קשר</Link>
-        <Link href="/BuyingSteps" className="hover:underline" onClick={() => setIsOpen(false)}>ליווי משקיעים</Link>
-        <Link href="/" className="hover:underline" onClick={() => setIsOpen(false)}>דף הבית</Link>
-      </nav>
-    </>
+        <Link href="/about" onClick={() => setIsOpen(false)}>אודות</Link>
+        <Link href="/services" onClick={() => setIsOpen(false)}>שירותים</Link>
+        <Link href="/Properties" onClick={() => setIsOpen(false)}>דירות</Link>
+        <Link href="/#contact" onClick={() => setIsOpen(false)}>צור קשר</Link>
+        <Link href="/BuyingSteps" onClick={() => setIsOpen(false)}>ליווי משקיעים</Link>
+        <Link href="/" onClick={() => setIsOpen(false)}>דף הבית</Link>
+      </div>
+    </header>
   );
 }
