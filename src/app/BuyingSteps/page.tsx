@@ -75,9 +75,9 @@ export default function StepImageScroll() {
     <div>
       <Hero />
 
-      <div className="relative bg-white" dir="rtl">
+      <div className="relative bg-white">
         {/* Sticky main content */}
-        <div className="sticky top-0 z-10 h-[70vh] flex flex-col md:flex-row bg-white">
+        <div className="sticky top-0 z-10 h-[70vh] flex flex-col md:flex-row-reverse bg-white">
           {/* Text */}
           <div className="relative w-full md:w-1/2 h-[70vh] flex items-center justify-center px-4 md:px-8 text-right">
             <AnimatePresence mode="wait">
@@ -98,8 +98,8 @@ export default function StepImageScroll() {
               </motion.div>
             </AnimatePresence>
 
-            {/* Timeline (desktop only) */}
-            <div className="hidden md:block absolute left-0 top-0 bottom-0 px-2 py-6">
+            {/* Timeline */}
+            <div className="hidden md:block absolute right-0 top-0 bottom-0 px-2 py-6">
               <div className="flex flex-col justify-center h-full gap-2">
                 {stepTexts.map((_, i) => (
                   <div
@@ -131,7 +131,7 @@ export default function StepImageScroll() {
                     src={layers[visibleStep]}
                     alt={`Step ${visibleStep}`}
                     fill
-                    className="object-contain rounded shadow"
+                    className="object-cover rounded shadow"
                   />
                 </motion.div>
               </AnimatePresence>
@@ -139,22 +139,8 @@ export default function StepImageScroll() {
           </div>
         </div>
 
-        {/* Scroll triggers – mobile (snap mode) */}
-        <div className="block md:hidden h-screen overflow-y-scroll snap-y snap-mandatory">
-          {stepTexts.map((_, i) => (
-            <div
-              key={i}
-              data-step={i}
-              ref={(el) => {
-                stepRefs.current[i] = el;
-              }}
-              className="h-screen snap-start"
-            />
-          ))}
-        </div>
-
-        {/* Scroll triggers – desktop (smooth scroll) */}
-        <div className="hidden md:block pt-[70vh]">
+        {/* Scroll triggers */}
+        <div className="pt-[70vh]">
           {stepTexts.map((_, i) => (
             <div
               key={i}
