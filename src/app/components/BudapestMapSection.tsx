@@ -39,7 +39,7 @@ export default function BudapestMapSection() {
     <section className="py-20 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         <div className="relative w-full max-w-2xl h-[600px]">
-          <Image src="/images/budapest-map.png" alt="Budapest Map" layout="fill" objectFit="contain" />
+          <Image src="/images/Budapest_map_3D_effect.svg" alt="Budapest Map" layout="fill" objectFit="contain" />
           {budapestDistricts.map((district, index) => (
             <div
               key={index}

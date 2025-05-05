@@ -1,7 +1,7 @@
-// app/properties/page.tsx
 import Image from "next/image";
 import Hero from "../components/Hero";
 import BudapestMapSection from "../components/BudapestMapSection";
+
 const apartments = [
   {
     title: "דירה ליד הפרלמנט",
@@ -57,34 +57,41 @@ const apartments = [
 export default function ApartmentsPage() {
   return (
     <div>
-      <Hero/>
-    <section className="bg-white py-20 px-6">
-      <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-6xl font-extrabold text-black  tracking-tight drop-shadow-[2px_2px_0_rgba(0,0,0,0.15)] mb-12">
-          Apartments
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {apartments.map((apartment, i) => (
-            <div key={i} className="relative rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src={apartment.image}
-                alt={apartment.title}
-                width={600}
-                height={400}
-                className="w-full h-72 object-cover rounded-t-lg"
-              />
-              <div className="bg-white p-4 text-right">
-                <h3 className="text-xl font-semibold text-gray-800 mb-1">{apartment.title}</h3>
-                <p className="text-sm text-gray-600">גודל הדירה: {apartment.size}</p>
-                <p className="text-sm text-gray-600">{apartment.units}</p>
-                <p className="text-sm text-sky-700 font-bold mt-2">{apartment.price}</p>
+      <Hero />
+
+      <section className="bg-white py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-black tracking-tight drop-shadow-md mb-12">
+            דירות נבחרות
+          </h1>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+            {apartments.map((apartment, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={apartment.image}
+                    alt={apartment.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5 text-right" dir="rtl">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{apartment.title}</h3>
+                  <p className="text-sm text-gray-600">גודל הדירה: {apartment.size}</p>
+                  <p className="text-sm text-gray-600">{apartment.units}</p>
+                  <p className="text-md font-semibold text-sky-800 mt-4">{apartment.price}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-    <BudapestMapSection/>
+      </section>
+
+      <BudapestMapSection />
     </div>
   );
 }
