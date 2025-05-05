@@ -46,6 +46,7 @@ const Section = ({ title, subtitle, description, items, columns = 3 }: any) => (
 );
 
 export default function ServicesPage() {
+  
   const investments = [
     {
       title: "השקעות בפרויקטים חדשים",
@@ -123,8 +124,8 @@ export default function ServicesPage() {
       <Hero />
       <Section
         title="INVESTMENTS"
-        subtitle="השקעות נדל\"ן בהתאמה אישית"
-        description="אנו מתמחים באיתור ובביצוע עסקאות נדל\"ן במגוון אסטרטגיות. כל השקעה מותאמת אישית לסטטוס ולמטרות המשקיע תוך תכנון מקצועי ובניית אסטרטגיה מסודרת."
+        subtitle="השקעות נדל\ן בהתאמה אישית"
+        description="אנו מתמחים באיתור ובביצוע עסקאות נדל\ן במגוון אסטרטגיות. כל השקעה מותאמת אישית לסטטוס ולמטרות המשקיע תוך תכנון מקצועי ובניית אסטרטגיה מסודרת."
         items={investments}
         columns={3}
       />
