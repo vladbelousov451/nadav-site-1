@@ -16,37 +16,55 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
-const Section = ({ title, subtitle, description, items, columns = 3 }: any) => (
-  <section className="bg-white text-gray-900 py-20 px-4">
-    <div className="max-w-7xl mx-auto text-center">
-      <h2 className="text-5xl font-extrabold text-sky-900 mb-4 tracking-tight drop-shadow-sm">{title}</h2>
-      {subtitle && <p className="text-xl text-gray-700 mb-2">{subtitle}</p>}
-      {description && (
-        <p className="mb-10 text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">{description}</p>
-      )}
+// Helper to map number of columns to Tailwind classes
+const getGridColsClass = (columns: number) => {
+  const map: { [key: number]: string } = {
+    2: "md:grid-cols-2",
+    3: "md:grid-cols-3",
+    4: "md:grid-cols-4",
+    5: "md:grid-cols-5",
+  };
+  return map[columns] || "md:grid-cols-3";
+};
 
-      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${columns} gap-10`}>
-        {items.map((item: any, i: number) => (
-          <div key={i} className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-4 text-center flex flex-col items-center">
-            <div className="relative w-full h-48 mb-4 overflow-hidden rounded-lg">
-              <Image
-                src={item.image}
-                alt={item.subtitle || item.title}
-                fill
-                className="object-cover w-full h-full transition-opacity duration-300 group-hover:opacity-70 rounded-lg"
-              />
+// Reusable Section component with RTL support
+const Section = ({ title, subtitle, description, items, columns = 3 }: any) => {
+  const columnsClass = getGridColsClass(columns);
+
+  return (
+    <section className="bg-white text-gray-900 py-20 px-4" dir="rtl">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-5xl font-extrabold text-sky-900 mb-4 tracking-tight drop-shadow-sm">{title}</h2>
+        {subtitle && <p className="text-xl text-gray-700 mb-2">{subtitle}</p>}
+        {description && (
+          <p className="mb-10 text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">{description}</p>
+        )}
+
+        <div className={`grid grid-cols-1 sm:grid-cols-2 ${columnsClass} gap-10`}>
+          {items.map((item: any, i: number) => (
+            <div
+              key={i}
+              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-4 text-center flex flex-col items-center"
+            >
+              <div className="relative w-full h-48 mb-4 overflow-hidden rounded-lg">
+                <Image
+                  src={item.image}
+                  alt={item.subtitle || item.title}
+                  fill
+                  className="object-cover w-full h-full transition-opacity duration-300 group-hover:opacity-70 rounded-lg"
+                />
+              </div>
+              {item.icon && <div className="mb-2">{item.icon}</div>}
+              <h3 className="text-lg font-semibold text-gray-800">{item.subtitle || item.title}</h3>
             </div>
-            {item.icon && <div className="mb-2">{item.icon}</div>}
-            <h3 className="text-lg font-semibold text-gray-800">{item.subtitle || item.title}</h3>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default function ServicesPage() {
-  
   const investments = [
     {
       title: "השקעות בפרויקטים חדשים",
@@ -124,8 +142,8 @@ export default function ServicesPage() {
       <Hero />
       <Section
         title="INVESTMENTS"
-        subtitle="השקעות נדל\ן בהתאמה אישית"
-        description="אנו מתמחים באיתור ובביצוע עסקאות נדל\ן במגוון אסטרטגיות. כל השקעה מותאמת אישית לסטטוס ולמטרות המשקיע תוך תכנון מקצועי ובניית אסטרטגיה מסודרת."
+        subtitle='השקעות נדל"ן בהתאמה אישית'
+        description='אנו מתמחים באיתור ובביצוע עסקאות נדל"ן במגוון אסטרטגיות. כל השקעה מותאמת אישית לסטטוס ולמטרות המשקיע תוך תכנון מקצועי ובניית אסטרטגיה מסודרת.'
         items={investments}
         columns={3}
       />
