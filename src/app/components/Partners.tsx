@@ -11,7 +11,7 @@ export default function Partners() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
         {partners.map((p, i) => (
           <div key={i} className="rounded-lg shadow-lg overflow-hidden bg-white">
-            <img src={p.image} alt={p.name} className="w-full h-96 object-cover" />
+            <img src={p.image} alt={p.name} className="w-full h-auto max-h-96 object-contain sm:h-96 sm:object-cover" />
             <div className="p-4 bg-sky-900 bg-opacity-75">
               <p className="text-lg font-semibold text-white">{p.name}</p>
             </div>
