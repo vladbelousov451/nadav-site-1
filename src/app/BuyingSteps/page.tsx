@@ -6,12 +6,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import Hero from "../components/Hero";
 
 const layers = [
-  "/images/appartament-3.jpg",
-  "/images/appartament-4.jpg",
-  "/images/appartament5.jpg",
-  "/images/appartament-3.jpg",
-  "/images/appartament-3.jpg",
-  "/images/appartament-3.jpg",
+  "/images/step-1.png",
+  "/images/step-2.png",
+  "/images/step-3.png",
+  "/images/step-4.png",
+  "/images/step-5.png",
+  "/images/step-6.png",
 ];
 
 const stepTexts = [
@@ -61,9 +61,7 @@ export default function StepImageScroll() {
           }
         });
       },
-      {
-        threshold: 0.6,
-      }
+      { threshold: 0.6 }
     );
 
     stepRefs.current.forEach((ref) => {
@@ -78,10 +76,48 @@ export default function StepImageScroll() {
       <Hero />
 
       <div className="relative bg-white">
-        <div className="sticky top-0 z-10 h-[70vh] flex flex-col md:flex-row bg-white">
+        {/* Sticky main content */}
+        <div className="sticky top-0 z-10 h-[70vh] flex flex-col md:flex-row-reverse bg-white">
+          {/* Text */}
+          <div className="relative w-full md:w-1/2 h-[70vh] flex items-center justify-center px-4 md:px-8 text-right">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={stepTexts[visibleStep].title}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.5 }}
+                className="bg-gray-100 rounded shadow p-6 md:p-8 max-w-xl w-full"
+              >
+                <h2 className="text-2xl font-bold text-sky-800 mb-4">
+                  {stepTexts[visibleStep].title}
+                </h2>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  {stepTexts[visibleStep].description}
+                </p>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Timeline */}
+            <div className="hidden md:block absolute right-0 top-0 bottom-0 px-2 py-6">
+              <div className="flex flex-col justify-center h-full gap-2">
+                {stepTexts.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`w-3 h-3 rounded-full border-2 ${
+                      i === visibleStep
+                        ? "bg-sky-600 border-sky-600"
+                        : "bg-white border-gray-400"
+                    } transition-all`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Image */}
-          <div className="w-full md:w-1/2 h-[70vh] flex items-center justify-center">
-            <div className="w-[80%] h-[80%] relative">
+          <div className="w-full md:w-1/2 h-[70vh] flex items-center justify-center p-4">
+            <div className="relative w-full h-full max-w-[95%] max-h-[95%]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={layers[visibleStep]}
@@ -101,30 +137,9 @@ export default function StepImageScroll() {
               </AnimatePresence>
             </div>
           </div>
-
-          {/* Text */}
-          <div className="w-full md:w-1/2 h-[70vh] flex items-center justify-center px-4 md:px-8 text-right">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={stepTexts[visibleStep].title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.5 }}
-                className="bg-gray-100 rounded shadow p-6 md:p-8 max-w-xl w-full"
-              >
-                <h2 className="text-2xl font-bold text-sky-800 mb-4">
-                  {stepTexts[visibleStep].title}
-                </h2>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  {stepTexts[visibleStep].description}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </div>
         </div>
 
-        {/* Invisible scroll steps */}
+        {/* Scroll triggers */}
         <div className="pt-[70vh]">
           {stepTexts.map((_, i) => (
             <div
